@@ -4,12 +4,49 @@ import search from "../assets/img/search.svg";
 import menu from "../assets/img/icon-menu.png";
 import close from "../assets/img/icon-close.png";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { ReactSearchAutocomplete } from "react-search-autocomplete";
+import { getList } from "../assets/utils/list";
 
 import "../assets/sass/Header.scss";
 
 function Header() {
   const [openMenu, setOpenMenu] = useState(false);
+  const [list, setList] = useState([]);
+  const [load, setLoad] = useState(true);
+  const [alert, setAlert] = useState(false);
+
+  useEffect(() => {
+    getList().then(
+      (items) => {
+        if (load) {
+          setList(items.results);
+        }
+      },
+      (error) => {
+        return console.log(error);
+      }
+    );
+    return setLoad(false);
+  }, []);
+
+  const handleOnSearch = (string, results) => {
+    setAlert(false);
+
+    if (results.length === 0) {
+      setAlert(true);
+    } else {
+      setAlert(false);
+    }
+  };
+
+  const handleOnSelect = (item) => {
+    setAlert(false);
+  };
+
+  const handleOnFocus = () => {
+    setAlert(false);
+  };
 
   return (
     <div className="header__container">
@@ -45,10 +82,23 @@ function Header() {
 
         <div className="header__child">
           <div className="search">
-            <input className="search__input" placeholder="Buscar"></input>
-            <button className="search__btn">
-              <img src={search} alt="cart" />
-            </button>
+            <ReactSearchAutocomplete
+              showIcon={false}
+              placeholder="Buscar"
+              items={list}
+              onSearch={handleOnSearch}
+              onSelect={handleOnSelect}
+              onFocus={handleOnFocus}
+              autoFocus
+            />
+
+            {alert && (
+              <div className="search__alert">
+                Sinto muito, não encontramos nada. :/
+              </div>
+            )}
+
+            <img className="search__btn" src={search} alt="cart" />
           </div>
 
           <ul className="header__actions">

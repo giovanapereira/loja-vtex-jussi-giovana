@@ -26,6 +26,23 @@
     justify-content: space-between;
     flex-wrap: nowrap;
     overflow-x: auto;
+    padding-bottom: 10px;
+
+    &::-webkit-scrollbar {
+      height: 8px;
+      margin: 10px;
+      border-radius: 30px;
+    }
+
+    &::-webkit-scrollbar-track {
+      border-radius: 30px;
+      background-color: $grey;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: $dark-grey;
+      border-radius: 30px;
+    }
 
     &--item {
       padding: 16px 10px;
@@ -35,6 +52,7 @@
       border: 1px solid $grey;
       box-sizing: border-box;
       border-radius: 4px;
+      width: 23.5%;
 
       &:first-child {
         margin-left: 0;
@@ -49,6 +67,7 @@
         font-weight: $bold;
         font-size: $font-size-md;
         color: $black;
+        text-transform: capitalize;
         margin: 0 0 16px;
       }
 
@@ -58,6 +77,10 @@
         font-size: $font-size-xs;
         color: $pink-jussi;
         margin: 0 0 16px;
+
+        &::first-letter {
+          text-transform: capitalize;
+        }
       }
     }
 
