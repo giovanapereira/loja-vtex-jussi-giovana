@@ -1,0 +1,19 @@
+%container-big {
+  margin: 0 auto;
+
+  @media (min-width: $l) {
+    width: 90%;
+    max-width: 720px;
+    min-width: $l - 30;
+  }
+}
+
+%container {
+  margin: 0 auto;
+
+  @media (min-width: $l) {
+    width: 90%;
+    max-width: 510px;
+    min-width: $l - 30;
+  }
+}
