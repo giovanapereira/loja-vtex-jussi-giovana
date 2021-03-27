@@ -17,16 +17,13 @@ function Header() {
   const [alert, setAlert] = useState(false);
 
   useEffect(() => {
-    getList().then(
-      (items) => {
+    getList()
+      .then((items) => {
         if (load) {
           setList(items.results);
         }
-      },
-      (error) => {
-        return console.log(error);
-      }
-    );
+      })
+      .catch((error) => console.log(error));
     return setLoad(false);
   }, []);
 

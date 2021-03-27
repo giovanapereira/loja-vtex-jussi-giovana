@@ -7,16 +7,13 @@ function ProductsChild() {
   const [load, setLoad] = useState(true);
 
   useEffect(() => {
-    getList().then(
-      (items) => {
+    getList()
+      .then((items) => {
         if (load) {
           setList(items.results);
         }
-      },
-      (error) => {
-        return console.log(error);
-      }
-    );
+      })
+      .catch((error) => console.log(error));
     return setLoad(false);
   }, []);
 

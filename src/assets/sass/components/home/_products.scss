@@ -52,7 +52,10 @@
       border: 1px solid $grey;
       box-sizing: border-box;
       border-radius: 4px;
-      width: 23.5%;
+
+      @media screen and (min-width: $m) {
+        width: 23.5%;
+      }
 
       &:first-child {
         margin-left: 0;
