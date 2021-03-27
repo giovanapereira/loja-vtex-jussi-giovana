@@ -4,6 +4,7 @@ import ReactDOM from "react-dom";
 // Components
 import Header from "./components/Header";
 import Banner from "./components/home/Banner";
+import TipBar from "./components/home/TipBar";
 
 import reportWebVitals from "./reportWebVitals";
 
@@ -11,6 +12,7 @@ ReactDOM.render(
   <React.StrictMode>
     <Header />
     <Banner />
+    <TipBar />
   </React.StrictMode>,
   document.getElementById("root")
 );
