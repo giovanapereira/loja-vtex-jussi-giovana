@@ -7,7 +7,6 @@ import close from "../assets/img/icon-close.png";
 import { useState } from "react";
 
 import "../assets/sass/Header.scss";
-import React from "react";
 
 function Header() {
   const [openMenu, setOpenMenu] = useState(false);

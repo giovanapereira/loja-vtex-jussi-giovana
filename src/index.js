@@ -3,12 +3,14 @@ import ReactDOM from "react-dom";
 
 // Components
 import Header from "./components/Header";
+import Banner from "./components/home/Banner";
 
 import reportWebVitals from "./reportWebVitals";
 
 ReactDOM.render(
   <React.StrictMode>
     <Header />
+    <Banner />
   </React.StrictMode>,
   document.getElementById("root")
 );

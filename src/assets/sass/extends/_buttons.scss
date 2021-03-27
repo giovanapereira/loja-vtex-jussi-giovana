@@ -6,3 +6,26 @@
   padding: 0;
   text-shadow: none;
 }
+
+%secondary-button {
+  @extend %btn-reset;
+  font-style: $normal;
+  font-weight: $bold;
+  font-size: $font-size-md;
+  color: $black;
+  border-radius: 6px;
+  border: 1px solid $black;
+  text-decoration: none;
+  padding: 12px 24px;
+  margin: 24px 0;
+  transition: all ease-in 0.2s;
+  line-height: 1;
+  display: inline-block;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $black;
+    color: $white;
+  }
+}
