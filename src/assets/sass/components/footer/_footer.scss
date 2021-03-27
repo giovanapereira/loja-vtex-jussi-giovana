@@ -1,0 +1,28 @@
+.footer {
+  @extend %container;
+
+  &__container {
+    padding: 136px 24px 20px;
+    background-color: $black;
+  }
+
+  &__child {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  img {
+    max-width: 142px;
+  }
+
+  &__menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    img {
+      max-width: 32px;
+    }
+  }
+}

@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 
 // Components
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 import Banner from "./components/home/Banner";
 import TipBar from "./components/home/TipBar";
 import Products from "./components/home/Products";
@@ -19,6 +20,7 @@ ReactDOM.render(
     <Products />
     <About />
     <Contact />
+    <Footer />
   </React.StrictMode>,
   document.getElementById("root")
 );
