@@ -6,6 +6,7 @@ import Header from "./components/Header";
 import Banner from "./components/home/Banner";
 import TipBar from "./components/home/TipBar";
 import Products from "./components/home/Products";
+import About from "./components/home/About";
 
 import reportWebVitals from "./reportWebVitals";
 
@@ -15,6 +16,7 @@ ReactDOM.render(
     <Banner />
     <TipBar />
     <Products />
+    <About />
   </React.StrictMode>,
   document.getElementById("root")
 );

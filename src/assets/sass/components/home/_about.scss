@@ -1,0 +1,66 @@
+.about {
+  @extend %container;
+
+  @media screen and (min-width: $m) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__container {
+    padding: 20px 24px;
+    background-color: $white;
+  }
+
+  &__child {
+    &:first-child {
+      @media screen and (min-width: $m) {
+        max-width: 240px;
+      }
+
+      display: flex;
+
+      @media screen and (max-width: $m) {
+        padding: 0 0 20px;
+      }
+    }
+  }
+
+  img {
+    max-width: 670px;
+
+    @media screen and (max-width: $m) {
+      max-width: 100%;
+    }
+  }
+
+  h3 {
+    font-style: $normal;
+    font-weight: $bold;
+    font-size: $font-size-lg;
+    text-transform: uppercase;
+    color: $black;
+
+    @media screen and (max-width: $m) {
+      font-size: $font-size-lg;
+    }
+  }
+
+  span {
+    font-size: $font-size-xlg;
+    color: $white;
+    margin-right: 20px;
+  }
+
+  p {
+    font-style: $normal;
+    font-weight: $bold;
+    font-size: $font-size-md;
+    color: $black;
+    margin: 16px 0;
+  }
+
+  &__link {
+    @extend %secondary-button;
+  }
+}
