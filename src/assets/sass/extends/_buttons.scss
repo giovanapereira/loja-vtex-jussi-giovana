@@ -7,6 +7,32 @@
   text-shadow: none;
 }
 
+%primary-button {
+  @extend %btn-reset;
+  background-color: $green-jussi;
+  font-style: $normal;
+  font-weight: $bold;
+  font-size: $font-size-md;
+  color: $black;
+  border-radius: 6px;
+  border: 1px solid $green-jussi;
+  text-decoration: none;
+  padding: 12px 24px;
+  margin: 24px 0 0;
+  transition: all ease-in 0.2s;
+  line-height: 1;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: darken($green-jussi, 10%);
+    border-color: darken($green-jussi, 10%);
+  }
+}
+
 %secondary-button {
   @extend %btn-reset;
   font-style: $normal;

@@ -1,5 +1,5 @@
 .banner {
-  @extend %container-big;
+  @extend %container;
 
   @media screen and (min-width: $m) {
     display: flex;
