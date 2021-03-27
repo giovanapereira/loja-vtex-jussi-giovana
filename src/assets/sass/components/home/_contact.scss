@@ -1,0 +1,42 @@
+.contact {
+  @extend %container;
+
+  &__container {
+    padding: 136px 24px;
+    background-color: $pink-jussi;
+  }
+
+  &__child {
+    text-align: center;
+  }
+
+  h3 {
+    font-style: $normal;
+    font-weight: $bold;
+    font-size: $font-size-lg;
+    text-transform: uppercase;
+    color: $white;
+  }
+
+  p {
+    font-style: $normal;
+    font-weight: $bold;
+    font-size: $font-size-md;
+    color: $white;
+    margin: 32px 0;
+  }
+
+  &__link {
+    font-style: $normal;
+    font-weight: $bold;
+    font-size: $font-size-lg;
+    color: $white;
+    text-decoration: none;
+
+    &:hover,
+    &:focus,
+    &:active {
+      text-decoration: underline;
+    }
+  }
+}

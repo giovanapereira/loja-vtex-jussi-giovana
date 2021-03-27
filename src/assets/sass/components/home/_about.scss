@@ -40,10 +40,6 @@
     font-size: $font-size-lg;
     text-transform: uppercase;
     color: $black;
-
-    @media screen and (max-width: $m) {
-      font-size: $font-size-lg;
-    }
   }
 
   span {
