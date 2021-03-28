@@ -2,7 +2,7 @@ import ProductsChild from "./ProductsChild";
 
 function Products() {
   return (
-    <section className="products__container">
+    <section id="products" className="products__container">
       <div className="products">
         <div className="products__child">
           <div className="products_text">

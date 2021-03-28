@@ -2,7 +2,7 @@ import about from "../../assets/img/image-jussi@2x.png";
 
 function About() {
   return (
-    <section className="about__container">
+    <section id="about" className="about__container">
       <div className="about">
         <div className="about__child">
           <div className="about_text">

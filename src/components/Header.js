@@ -4,7 +4,7 @@ import search from "../assets/img/search.svg";
 import menu from "../assets/img/icon-menu.png";
 import close from "../assets/img/icon-close.png";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { ReactSearchAutocomplete } from "react-search-autocomplete";
 import { getList } from "../assets/utils/list";
 
@@ -16,7 +16,7 @@ function Header() {
   const [load, setLoad] = useState(true);
   const [alert, setAlert] = useState(false);
 
-  useEffect(() => {
+  const onSearch = () => {
     getList()
       .then((items) => {
         if (load) {
@@ -24,11 +24,15 @@ function Header() {
         }
       })
       .catch((error) => console.log(error));
+
     return setLoad(false);
-  }, []);
+  };
 
   const handleOnSearch = (string, results) => {
     setAlert(false);
+    console.log("cachorro?????");
+
+    onSearch();
 
     if (results.length === 0) {
       setAlert(true);
